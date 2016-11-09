@@ -20,14 +20,14 @@ Platform assembly: C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Manag
 Loading C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
 Platform assembly: C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.148 seconds
+- Completed reload, in  0.046 seconds
 Platform assembly: C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Desarrollo\is4You2\is4You2\Integración\is4You2_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.247513 ms
+UnloadTime: 0.709479 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4204 -> priority: 1 
-  Thread -> id: 2ebc -> priority: 1 
+  Thread -> id: 1808 -> priority: 1 
+  Thread -> id: 3c40 -> priority: 1 
