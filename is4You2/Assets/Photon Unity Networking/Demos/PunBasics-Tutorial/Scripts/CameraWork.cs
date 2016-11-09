@@ -36,12 +36,14 @@ namespace ExitGames.Demos.DemoAnimator
 		[Tooltip("Set this as false if a component of a prefab being instanciated by Photon Network, and manually call OnStartFollowing() when and if needed.")]
 		public bool followOnStart = false;
 
-		#endregion
-		
-		#region Private Properties
+        public Camera camara;
 
-		// cached transform of the target
-		Transform cameraTransform;
+        #endregion
+
+        #region Private Properties
+
+        // cached transform of the target
+        Transform cameraTransform;
 
 		// maintain a flag internally to reconnect if target is lost or camera is switched
 		bool isFollowing;
@@ -96,8 +98,8 @@ namespace ExitGames.Demos.DemoAnimator
 		/// Use this when you don't know at the time of editing what to follow, typically instances managed by the photon network.
 		/// </summary>
 		public void OnStartFollowing()
-		{	      
-			cameraTransform = Camera.main.transform;
+		{
+            cameraTransform = camara.transform;
 			isFollowing = true;
 			// we don't smooth anything, we go straight to the right camera shot
 			Cut();
