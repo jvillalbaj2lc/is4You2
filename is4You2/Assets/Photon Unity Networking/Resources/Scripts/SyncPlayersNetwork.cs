@@ -9,13 +9,15 @@ namespace Com.Afrodita.isForYou2
         Quaternion trueRot;
         PhotonView pv;
         public InputField _consola;
-        public TextMesh _namePlayer;
 
         void Start()
         {
+            Canvas canvasName = this.gameObject.GetComponentInChildren<Canvas>();
             pv = GetComponent<PhotonView>();
-            if (PhotonNetwork.connected)
-                _namePlayer.text = photonView.owner.name;
+            if (PhotonNetwork.connected) {
+                canvasName.GetComponent<Text>().text = photonView.owner.name;
+            }
+                //_namePlayer.text = photonView.owner.name;
         }
 
         // Update is called once per frame

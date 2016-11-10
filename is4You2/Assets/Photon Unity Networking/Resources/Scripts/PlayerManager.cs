@@ -12,7 +12,6 @@ namespace Com.Afrodita.isForYou2
 
         void Start() {
             CameraWork cameraWork = this.GetComponent<CameraWork>();
-            Cursor.visible = false;
             if (cameraWork != null)
             {
                 if (photonView.isMine)
