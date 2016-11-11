@@ -10,6 +10,7 @@ namespace Com.Afrodita.isForYou2
         public InputField _consola;
         public string gameVersion = "1";
         public InputField _inputNamePlayer;
+        private AuthenticationValues autenticacion;
         #endregion
 
         #region Variables privadas.
@@ -95,6 +96,7 @@ namespace Com.Afrodita.isForYou2
                 }
             }
             PhotonNetwork.playerName = defaultName;
+            autenticacion = new AuthenticationValues(defaultName);
         }
         public void SetPlayerName(string value)
         {

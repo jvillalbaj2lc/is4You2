@@ -6,23 +6,25 @@ using System;
 
 namespace Com.Afrodita.isForYou2
 {
-    public class ChatManagerNetwork : MonoBehaviour, IChatClientListener
+    public class ChatManagerNetwork : Photon.PunBehaviour, IChatClientListener
     {
         public string appIdChat = "6c0a7c87-5329-4312-b940-26d91378aa9c";
         public InputField _inputSendChat;
         public InputField _inputGetChat;
-        public Canvas namePlayer;
         private ExitGames.Client.Photon.ConnectionProtocol connectProtocol;
+        private string namePlayer = "Invitado";
         ChatClient chatClient;
 
-        void Start() {
+        public void Start() {
 
+            namePlayer = PhotonNetwork.AuthValues.UserId;
             connectProtocol = ExitGames.Client.Photon.ConnectionProtocol.Udp;
             chatClient = new ChatClient(this, connectProtocol);
             chatClient.ChatRegion = "US";
 
             ExitGames.Client.Photon.Chat.AuthenticationValues authValues = new ExitGames.Client.Photon.Chat.AuthenticationValues();
-            authValues.UserId = namePlayer.GetComponent<Text>().text;
+
+            authValues.UserId = namePlayer;
             authValues.AuthType = ExitGames.Client.Photon.Chat.CustomAuthenticationType.None;
 
             chatClient.Connect(appIdChat, "1", authValues);
@@ -35,10 +37,13 @@ namespace Com.Afrodita.isForYou2
         }
 
         public void OnInputSendChat() {
-            chatClient.PublishMessage("Public", _inputSendChat.text);
+            if (!string.IsNullOrEmpty(_inputSendChat.text)){
+                chatClient.PublishMessage("Public", namePlayer + ": " + _inputSendChat.text);
+                _inputSendChat.ActivateInputField();
+                _inputSendChat.Select();
+            }
             _inputSendChat.text = string.Empty;
         }
-
         #region Photon Chat Callbacks
 
         
@@ -62,9 +67,9 @@ namespace Com.Afrodita.isForYou2
             for (int i = 0; i < msgCount; i++)
             { //go through each received msg
                 string msg = messages[i].ToString();
-                _inputGetChat.text = _inputGetChat.text + namePlayer + ":" + msg + "\n";
-                Debug.Log(namePlayer + ": " + msg);
+                _inputGetChat.text = _inputGetChat.text  + msg + "\n";
             }
+            _inputGetChat.MoveTextEnd(true);
         }
         public void OnPrivateMessage(string sender, object message, string channelName)
         {
@@ -72,7 +77,6 @@ namespace Com.Afrodita.isForYou2
         public void OnStatusUpdate(string user, int status, bool gotMessage, object message)
         {
         }
-
         public void OnSubscribed(string[] channels, bool[] results)
         {
             Debug.Log("Subscribed to a new channel!");

@@ -73,7 +73,7 @@ GameObject:
   - 224: {fileID: 224000011617815708}
   - 222: {fileID: 222000014127995950}
   - 114: {fileID: 114000013023372458}
-  - 114: {fileID: 114000013202009054}
+  - 114: {fileID: 114000011354901532}
   m_Layer: 0
   m_Name: Panel Chat
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000013202009054}
+      - m_Target: {fileID: 0}
         m_MethodName: OnInputSendChat
         m_Mode: 1
         m_Arguments:
@@ -267,6 +267,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000011354901532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011886808098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4fa531ec3e4cc4b81bd586ae4d067d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appIdChat: 6c0a7c87-5329-4312-b940-26d91378aa9c
+  _inputSendChat: {fileID: 114000010280478406}
+  _inputGetChat: {fileID: 114000011471442110}
 --- !u!114 &114000011471442110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,22 +431,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114000013202009054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011886808098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4fa531ec3e4cc4b81bd586ae4d067d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appIdChat: 6c0a7c87-5329-4312-b940-26d91378aa9c
-  _inputSendChat: {fileID: 114000010280478406}
-  _inputGetChat: {fileID: 114000011471442110}
-  namePlayer: {fileID: 223000012649198684, guid: be4b4fc9a3279d84cae468849b2c3d28,
-    type: 2}
 --- !u!114 &114000013432594690
 MonoBehaviour:
   m_ObjectHideFlags: 1

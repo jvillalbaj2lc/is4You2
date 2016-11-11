@@ -14,8 +14,9 @@ namespace Com.Afrodita.isForYou2
             CameraWork cameraWork = this.GetComponent<CameraWork>();
             if (cameraWork != null)
             {
-                if (photonView.isMine)
+                if (photonView.isMine) {
                     cameraWork.OnStartFollowing();
+                }
             }
             else
             {
