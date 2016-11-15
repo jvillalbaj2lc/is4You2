@@ -10,7 +10,6 @@ namespace Com.Afrodita.isForYou2
         public InputField _consola;
         public string gameVersion = "1";
         public InputField _inputNamePlayer;
-        private AuthenticationValues autenticacion;
         #endregion
 
         #region Variables privadas.
@@ -75,7 +74,7 @@ namespace Com.Afrodita.isForYou2
             if (PhotonNetwork.room.playerCount == 1)
             {
                 Commons.Traza(_consola, Commons.MENSAJE_CONEXION_SALA);
-                PhotonNetwork.LoadLevel(Commons.Escenas.Laboratorio.ToString());
+                PhotonNetwork.LoadLevel(Commons.Escenas.Apartment.ToString());
             }
             #endregion
         }
@@ -86,7 +85,10 @@ namespace Com.Afrodita.isForYou2
             PhotonNetwork.CreateRoom(null, new RoomOptions(), null);
         }
         void GetNamePlayerPhoton() {
+
             string defaultName = string.Empty;
+            AuthenticationValues autenticacion;
+
             if (_inputNamePlayer != null)
             {
                 if (PlayerPrefs.HasKey(playerNamePrefKey))

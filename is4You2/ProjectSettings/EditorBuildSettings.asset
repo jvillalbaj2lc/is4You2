@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Photon Unity Networking/Resources/Scenes/Launcher.unity
   - enabled: 1
     path: Assets/Photon Unity Networking/Resources/Scenes/Laboratorio.unity
+  - enabled: 1
+    path: Assets/Photon Unity Networking/Resources/Scenes/Apartment.unity

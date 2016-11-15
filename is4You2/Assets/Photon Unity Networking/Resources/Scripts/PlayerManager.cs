@@ -26,8 +26,11 @@ namespace Com.Afrodita.isForYou2
 
         void Update()
         {
-            if (photonView.isMine)
-            {
+            if (PhotonNetwork.connected) {
+                if (photonView.isMine)
+                    Walk();
+            }
+            else{
                 Walk();
             }
         }
@@ -40,9 +43,9 @@ namespace Com.Afrodita.isForYou2
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);
                 moveDirection *= speed;
-                if (Input.GetButton("Jump"))
-                    moveDirection.y = jumpSpeed;
-                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speedRatation);
+                //if (Input.GetButton("Jump"))
+                //    moveDirection.y = jumpSpeed;
+                //transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speedRatation);
             }
             moveDirection.y -= gravity * Time.deltaTime;
             controller.Move(moveDirection * Time.deltaTime);

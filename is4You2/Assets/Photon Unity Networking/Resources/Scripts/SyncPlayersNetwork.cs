@@ -8,7 +8,6 @@ namespace Com.Afrodita.isForYou2
         Vector3 trueLoc;
         Quaternion trueRot;
         PhotonView pv;
-        public InputField _consola;
 
         void Start()
         {
@@ -17,7 +16,6 @@ namespace Com.Afrodita.isForYou2
             if (PhotonNetwork.connected) {
                 canvasName.GetComponent<Text>().text = photonView.owner.name;
             }
-                //_namePlayer.text = photonView.owner.name;
         }
 
         // Update is called once per frame

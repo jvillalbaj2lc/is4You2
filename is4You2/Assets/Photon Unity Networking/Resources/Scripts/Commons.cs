@@ -24,7 +24,8 @@ namespace Com.Afrodita.isForYou2
 
         public enum Escenas
         {
-            Laboratorio
+            Laboratorio,
+            Apartment
         }
         /// <summary>
         /// Método común para escribir por consola los mensaje de las trazas.

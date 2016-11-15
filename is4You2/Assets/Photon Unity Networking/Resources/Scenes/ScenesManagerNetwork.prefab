@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012987799176}
   - 114: {fileID: 114000012286009668}
-  - 114: {fileID: 114000012412648220}
   m_Layer: 0
   m_Name: ScenesManagerNetwork
   m_TagString: Untagged
@@ -52,19 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989e4e7cebf51144cbae791126423df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _consola: {fileID: 114000014273008970, guid: e8b37cbb07281794882a6118c9347a26, type: 2}
   playerPrefab: {fileID: 1000012021618314, guid: be4b4fc9a3279d84cae468849b2c3d28,
     type: 2}
---- !u!114 &114000012412648220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010162883070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ebd10e1713416f4f8e0385588c5a213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  InicioVisible: 0
