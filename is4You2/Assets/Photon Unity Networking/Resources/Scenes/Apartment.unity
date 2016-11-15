@@ -89,7 +89,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: 0.16666667
     manualCellSize: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6eb065e525f3ffc4ab9cd81adb0e745d, type: 2}
 --- !u!1001 &143108793
 Prefab:
   m_ObjectHideFlags: 0
@@ -356,8 +356,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &664971231
 MeshRenderer:
@@ -414,7 +414,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 664971230}
   m_LocalRotation: {x: -0, y: -0.39549628, z: -0, w: 0.9184676}
-  m_LocalPosition: {x: -0.1158191, y: 8.219999, z: -0.040673807}
+  m_LocalPosition: {x: -0.1158191, y: 5.6, z: -0.040673807}
   m_LocalScale: {x: 0.01666667, y: 15.433167, z: 0.21917921}
   m_LocalEulerAnglesHint: {x: 0, y: -46.590004, z: 0}
   m_Children:
@@ -441,8 +441,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1404973613
 MeshRenderer:
@@ -499,7 +499,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1404973612}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.3600001, y: 0.56372106, z: 0}
+  m_LocalPosition: {x: 3.3600001, y: 0.528, z: 0}
   m_LocalScale: {x: 0.12959108, y: 7.7165875, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_Children: []
@@ -673,6 +673,10 @@ Prefab:
     - target: {fileID: 4000013080871176, guid: 718909b1b691dcb4e9ba61b86e807f03, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012060351986, guid: 718909b1b691dcb4e9ba61b86e807f03, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 718909b1b691dcb4e9ba61b86e807f03, type: 2}
