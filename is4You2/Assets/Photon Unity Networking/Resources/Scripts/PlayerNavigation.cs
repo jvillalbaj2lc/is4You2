@@ -27,17 +27,13 @@ namespace Com.Afrodita.isForYou2
         }
 
         void Walk() {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
+            if (Input.GetKeyDown(KeyCode.Mouse0)) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit))
-                {
+                if (Physics.Raycast(ray, out hit)){
                     agent.SetDestination(hit.point);
-                    Debug.Log("El player se debe mover en la siguiente dirección" + hit.point.ToString());
                 }
-
             }
         }
     }

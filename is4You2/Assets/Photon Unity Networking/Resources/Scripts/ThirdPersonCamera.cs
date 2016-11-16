@@ -13,7 +13,7 @@ namespace Com.Afrodita.isForYou2
         /// <summary>
         /// Representa la distancia de la camara con respecto al objetivo.
         /// </summary>
-        public float distance = 10.0f;
+        public float distance = 50.0f;
         /// <summary>
         /// Representa el angulo mínimo de la camara con respecto a la parte inferior.
         /// </summary>
@@ -32,6 +32,10 @@ namespace Com.Afrodita.isForYou2
         private Transform cameraTransform;
         private float currentX = 0.0f;
         private float currentY = 0.0f;
+        private bool zoomForward = false;
+        private bool zoombackWarkds = false;
+        private Camera cameraPlayer;
+        private float zoom = 0.0f;
         #endregion
 
         #region Eventos Unity.
@@ -54,15 +58,21 @@ namespace Com.Afrodita.isForYou2
             }
         }
         void OnStartFollowTarget() {
-            cameraTransform = this.gameObject.GetComponentInChildren<Camera>().transform;
-        }
+            cameraTransform = this.gameObject.GetComponent<Camera>().transform;
+            cameraPlayer = this.gameObject.GetComponentInChildren<Camera>();
+            }
         void Update()
         {
-            if (Input.GetMouseButton(1))
-            {
+            if (Input.GetMouseButton(1)){
                 currentX += Input.GetAxis("Mouse X") * sensibility;
                 currentY += Input.GetAxis("Mouse Y") * -2;
                 currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+            }
+
+            if (Input.GetKey(KeyCode.Mouse2))
+            {
+                zoom = Input.GetAxis("Mouse Y") * -2;
+                distance = distance + zoom;
             }
         }
         void LateUpdate()
