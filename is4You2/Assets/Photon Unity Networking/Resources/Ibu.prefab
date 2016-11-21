@@ -81,7 +81,6 @@ GameObject:
   - 33: {fileID: 33000011703161674}
   - 136: {fileID: 136000013057464570}
   - 23: {fileID: 23000013674151720}
-  - 114: {fileID: 114000010376754418}
   - 143: {fileID: 143000011899810268}
   - 114: {fileID: 114000010067036954}
   - 114: {fileID: 114000012259141310}
@@ -294,21 +293,6 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000010376754418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012021618314}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d667ced209300e47949243ea494dbad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
-  gravity: 20
-  speedRatation: 60
 --- !u!114 &114000010435035142
 MonoBehaviour:
   m_ObjectHideFlags: 1

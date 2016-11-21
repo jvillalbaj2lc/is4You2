@@ -5,6 +5,7 @@ namespace Com.Afrodita.isForYou2
 {
     public class Commons : MonoBehaviour
     {
+        #region Propiedades.
         public const string MENSAJE_CONECTANDO_SERVIDOR = "1. Conectando con el servidor, por favor espere...\n";
         public const string MENSAJE_CONEXION_YA_ESTABLECIDA = "2. La aplicación ya estaba conectada al servidor de Photon Cloud...\n";
         public const string MENSAJE_CONEXION_SERVIDOR_CORRECTAMENTE = "2.2 Se ha conectado correctamente al servidor Photon Cloud...\n";
@@ -21,6 +22,27 @@ namespace Com.Afrodita.isForYou2
         public const string MENSAJE_INICO_LOGS = "Se inicia seguimiento de funcionamiento del juego";
         public const string MENSAJE_NO_ENTRAR_LOBBY = "Configuración especifica para no entrar al Lobby";
         public const string MENSAJE_SINCRONIZACION_ESCENAS = "Preparación automática de la sincronización de la escena";
+        #endregion
+
+        #region Procedimientos almacenados.
+        /// <summary>
+        /// Procedimiento que inserta en base de datos una nueva cuenta para un usuario.
+        /// </summary>
+        public const string SSPP_INSERTAR_CUENTA = "InsertarCuenta";
+        /// <summary>
+        /// Procedimiento que obtiene la lista de todos los paises activos.
+        /// </summary>
+        public const string SSPP_OBTENER_PAISES = "ObtenerPaises";
+        #endregion
+
+        #region Conexiones
+        public const string CO_SE = "Server=j2l.net;";
+        public const string CO_DB = "Database=is4You2;";
+        public const string CO_ID = "User ID=is4YouRoot;";
+        public const string CO_PA = "Password=is12345*#";
+        public const string CO_IS = "Integrated Security=True";
+        public const string BBDD = "is4You2";
+        #endregion
 
         public enum Escenas
         {
